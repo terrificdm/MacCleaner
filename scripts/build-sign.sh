@@ -15,6 +15,10 @@ APP_SRC="src-tauri/target/release/bundle/macos/MacCleaner.app"
 PASS=$(security find-generic-password -a "$USER" -s "$SVC" -w)
 security unlock-keychain -p "$PASS" "$KC"
 
+# Source paths end up in the binary (panic locations). Replace the builder's
+# home and project folders so a shipped app doesn't reveal the user name.
+export RUSTFLAGS="${RUSTFLAGS:-} --remap-path-prefix=$HOME/.cargo=/cargo --remap-path-prefix=$HOME/.rustup=/rustup --remap-path-prefix=$PWD=/maccleaner --remap-path-prefix=$HOME=/home"
+
 # Build, then sign ourselves (Tauri would otherwise ad-hoc sign).
 npx tauri build --bundles app
 

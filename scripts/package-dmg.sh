@@ -15,6 +15,13 @@ if [ "${1:-}" != "--no-build" ]; then
 fi
 [ -d "$APP_SRC" ] || { echo "Missing $APP_SRC; run without --no-build"; exit 1; }
 
+# Never ship a binary that reveals the builder's home folder (user name).
+LEAKS=$(strings -a "$APP_SRC/Contents/MacOS/maccleaner" | grep -cF "$HOME" || true)
+if [ "$LEAKS" != "0" ]; then
+  echo "The binary contains $HOME paths; build with scripts/build-sign.sh (it remaps them)." >&2
+  exit 1
+fi
+
 STAGE=$(mktemp -d)
 trap 'rm -rf "$STAGE"' EXIT
 ditto "$APP_SRC" "$STAGE/MacCleaner.app"
