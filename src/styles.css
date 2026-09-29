@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@theme {
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Helvetica Neue", sans-serif;
+  --font-mono: "SF Mono", ui-monospace, Menlo, monospace;
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-line: var(--line);
+  --color-card: var(--card);
+  --color-card-hover: var(--card-hover);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-danger: #ff5a6e;
+  --color-warn: #ffb020;
+  --color-ok: #2fd39a;
+}
+
+:root {
+  --fg: #151a2d;
+  --muted: #5d6480;
+  --faint: #979cb3;
+  --line: rgba(20, 26, 60, 0.09);
+  --card: rgba(255, 255, 255, 0.62);
+  --card-hover: rgba(255, 255, 255, 0.85);
+  --card-solid: #ffffff;
+  --sidebar-bg: rgba(246, 247, 252, 0.72);
+  --main-bg: #f4f5fb;
+  --accent: #7b5cff;
+  --accent-2: #ff5fa2;
+  --shadow: 0 10px 40px -12px rgba(40, 40, 90, 0.18);
+  --glow-opacity: 0.35;
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --fg: #eef0ff;
+  --muted: #a3a8c6;
+  --faint: #6b7093;
+  --line: rgba(255, 255, 255, 0.08);
+  --card: rgba(255, 255, 255, 0.055);
+  --card-hover: rgba(255, 255, 255, 0.09);
+  --card-solid: #1b1d33;
+  --sidebar-bg: rgba(18, 19, 34, 0.55);
+  --main-bg: #0e0f1d;
+  --shadow: 0 16px 50px -16px rgba(0, 0, 0, 0.6);
+  --glow-opacity: 0.55;
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: transparent;
+  color: var(--fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: default;
+}
+
+/* Browser preview has no native vibrancy; fake it. */
+html:not(.tauri) body {
+  background: var(--main-bg);
+}
+
+input,
+textarea {
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+.selectable {
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 10px;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--faint);
+}
+
+.glass {
+  background: var(--card);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+}
+
+.solid-panel {
+  background: var(--card-solid);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+/* Sidebar: native vibrancy shows through in Tauri; tinted fallback in the browser. */
+.sidebar {
+  background: var(--sidebar-bg);
+}
+html.tauri .sidebar {
+  background: color-mix(in srgb, var(--sidebar-bg) 35%, transparent);
+}
+.main-surface {
+  background: var(--main-bg);
+}
+
+.gradient-text {
+  background: linear-gradient(120deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin-slow {
+  animation: spin-slow 6s linear infinite;
+}
+.animate-spin-fast {
+  animation: spin-slow 1.4s linear infinite;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: -200% 0;
+  }
+  to {
+    background-position: 200% 0;
+  }
+}
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s linear infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}

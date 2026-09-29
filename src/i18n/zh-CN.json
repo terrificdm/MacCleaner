@@ -1,0 +1,469 @@
+{
+  "app": {
+    "tagline": "让你的 Mac 轻装上阵"
+  },
+  "nav": {
+    "sections": {
+      "clean": "清理",
+      "apps": "应用",
+      "tools": "工具"
+    },
+    "smart": "智能扫描",
+    "space": "空间透视",
+    "system": "系统垃圾",
+    "dev": "开发者垃圾",
+    "large": "大文件和旧文件",
+    "apps": "应用卸载",
+    "leftovers": "残留文件",
+    "trash": "废纸篓与下载",
+    "history": "清理历史",
+    "settings": "设置"
+  },
+  "sidebar": {
+    "free": "可用 {{free}}，共 {{total}}"
+  },
+  "dryRun": {
+    "sidebar": "演练模式：不会移动任何文件",
+    "badge": "演练"
+  },
+  "modules": {
+    "smart": {
+      "subtitle": "一键扫描所有可清理的内容",
+      "heroTitle": "给你的 Mac 做一次全面体检",
+      "heroHint": "依次扫描系统垃圾、开发者垃圾、残留文件、下载、大文件和废纸篓（废纸篓需要完全磁盘访问权限）。扫描只读取，不会改动任何东西。"
+    },
+    "space": {
+      "subtitle": "看清磁盘空间都去了哪里",
+      "heroTitle": "扫描整个磁盘",
+      "heroHint": "统计内置数据卷上每个文件夹实际占用的空间，硬链接只算一次。通常需要几十秒，文件很多时可能要几分钟。"
+    },
+    "system": {
+      "subtitle": "应用缓存、日志、崩溃报告和临时文件",
+      "heroTitle": "查找系统垃圾",
+      "heroHint": "缓存会在需要时自动重新生成。正在运行的应用的缓存、正在被使用的文件不会默认勾选，清理时也会再次跳过。"
+    },
+    "dev": {
+      "subtitle": "npm、pip、Homebrew、Docker 缓存和闲置的 node_modules",
+      "heroTitle": "查找开发者垃圾",
+      "heroHint": "包管理器缓存可以随时重新下载。node_modules 只列出长时间没有改动的项目。"
+    },
+    "large": {
+      "subtitle": "找出占地方的大文件和很久没用过的文件",
+      "heroTitle": "查找大文件和旧文件",
+      "heroHint": "扫描整个个人文件夹，包括隐藏文件夹和 ~/Library。受保护的位置、Git 仓库内部、编译输出、虚拟环境和应用包内部除外。所有文件默认都不勾选，由你决定。"
+    },
+    "apps": {
+      "subtitle": "彻底卸载应用及其关联文件"
+    },
+    "leftovers": {
+      "subtitle": "已删除应用留下的配置、缓存和数据",
+      "heroTitle": "查找残留文件",
+      "heroHint": "按 Bundle ID 比对已安装的应用，找出没有主人的文件。"
+    },
+    "trash": {
+      "subtitle": "清空废纸篓，整理下载文件夹",
+      "heroTitle": "检查废纸篓和下载",
+      "heroHint": "下载文件夹里放了一个月以上的安装包会被建议清理。"
+    },
+    "history": {
+      "subtitle": "每次清理的记录，只保存在本机"
+    },
+    "settings": {
+      "subtitle": "语言、主题、安全和清理规则"
+    }
+  },
+  "common": {
+    "scan": "扫描",
+    "scanning": "扫描中",
+    "cancel": "取消",
+    "rescan": "重新扫描",
+    "refresh": "刷新",
+    "clean": "清理",
+    "moveToTrash": "移到废纸篓",
+    "selectedToClean": "已选择",
+    "selectedOf": "已选 {{count}} / {{total}} 项，共发现 {{size}}",
+    "selectNone": "全不选",
+    "allClean": "很干净，没有发现需要清理的内容",
+    "itemCount": "{{count}} 项",
+    "showMore": "再显示 {{count}} 项",
+    "quickLook": "快速查看",
+    "reveal": "在访达中显示",
+    "addWhitelist": "加入白名单",
+    "unknown": "未知",
+    "all": "全部",
+    "noResults": "没有匹配的结果",
+    "done": "完成"
+  },
+  "time": {
+    "today": "今天",
+    "yesterday": "昨天",
+    "daysAgo": "{{count}} 天前",
+    "monthsAgo": "{{count}} 个月前",
+    "yearsAgo": "{{count}} 年前"
+  },
+  "groups": {
+    "userCaches": "用户缓存",
+    "logs": "日志",
+    "crashReports": "崩溃报告",
+    "tempFiles": "临时文件",
+    "npm": "npm 缓存",
+    "pip": "pip 缓存",
+    "yarn": "Yarn 缓存",
+    "pnpm": "pnpm 存储",
+    "bun": "Bun 缓存",
+    "cargo": "Cargo 缓存",
+    "go": "Go 构建缓存",
+    "gradle": "Gradle 缓存",
+    "maven": "Maven 仓库",
+    "xcode": "Xcode",
+    "playwright": "Playwright 浏览器",
+    "homebrew": "Homebrew 缓存和旧版本",
+    "docker": "Docker",
+    "nodeModules": "闲置的 node_modules",
+    "installers": "安装包",
+    "archives": "压缩包",
+    "downloads": "其他下载",
+    "trash": "废纸篓",
+    "video": "视频",
+    "diskImage": "磁盘映像",
+    "archive": "压缩包",
+    "document": "文档",
+    "audio": "音频",
+    "image": "图片",
+    "other": "其他",
+    "Application Support": "应用数据",
+    "Caches": "缓存",
+    "Preferences": "偏好设置",
+    "Containers": "沙盒容器",
+    "Group Containers": "共享容器",
+    "Saved Application State": "窗口状态",
+    "HTTPStorages": "网络存储",
+    "WebKit": "WebKit 数据",
+    "Cookies": "Cookie",
+    "Logs": "日志",
+    "Application Scripts": "应用脚本",
+    "LaunchAgents": "启动项",
+    "system": "系统级文件",
+    "app": "应用",
+    "space": "空间透视"
+  },
+  "notes": {
+    "running": "应用运行中",
+    "apple": "系统",
+    "permanent": "永久删除",
+    "sameVendor": "同厂商应用仍在",
+    "recentlyUsed": "最近有改动",
+    "needsAdmin": "需要密码",
+    "inUse": "正在使用",
+    "sharedWithCopy": "另一份副本也在用",
+    "locked": "已锁定"
+  },
+  "errors": {
+    "notAbsolute": "路径无效",
+    "notFound": "文件已不存在",
+    "protected": "受保护的位置，不能删除",
+    "whitelisted": "在白名单中",
+    "inTrash": "已经在废纸篓里",
+    "outsideAllowed": "不在允许清理的范围内",
+    "tooShallow": "这是顶层文件夹，只能清理其中的内容",
+    "appRunning": "应用正在运行，已跳过",
+    "changed": "扫描后文件有变化，请重新扫描",
+    "finderFailed": "访达未能移动该项目（可能取消了密码输入）",
+    "commandFailed": "命令执行失败",
+    "brewFailed": "brew 卸载失败，已改为直接移到废纸篓",
+    "appRefusedQuit": "应用没有退出（可能有未保存的文档），已停止卸载",
+    "cancelled": "已取消",
+    "noScan": "请先扫描磁盘",
+    "unknown": "出现了意外错误",
+    "insidePackage": "这是应用包、资料库、文稿包内部的文件，或 Git 仓库的 .git 目录，只能整个删除",
+    "self": "不能删除 MacCleaner 自己",
+    "inUse": "文件正在被使用，已跳过",
+    "installNotAllowed": "当前这份不需要安装",
+    "oldRunning": "已安装的旧版本没有退出，请手动退出后再试",
+    "oldNotMoved": "无法把已安装的旧版本移到废纸篓",
+    "copyFailed": "复制到“应用程序”失败。如果旧版本已经移到废纸篓，可以从废纸篓放回",
+    "locked": "文件已被锁定（访达“显示简介”里勾选了“已锁定”），已跳过",
+    "restoreExists": "原位置已经有同名项目，已跳过",
+    "restoreNotInTrash": "废纸篓里已经没有这一项",
+    "restoreManual": "没有记录废纸篓位置，请在访达里手动放回",
+    "restoreFailed": "放回失败"
+  },
+  "confirm": {
+    "title": "确认清理",
+    "emptyTitle": "清空废纸篓？",
+    "uninstallTitle": "确认卸载",
+    "desc": "{{count}} 项，共 {{size}}。取消勾选可以保留某一项。",
+    "emptyDesc": "本机废纸篓中的 {{size}} 将被永久删除。",
+    "action": "移到废纸篓",
+    "actionDry": "开始演练",
+    "actionEmpty": "永久清空",
+    "actionUninstall": "卸载",
+    "dryRunNote": "演练模式已开启：只会列出将要处理的项目，不会移动或删除任何文件。可以在设置中关闭。",
+    "trashNote": "文件和文件夹都会移到废纸篓，在清空废纸篓之前都可以“放回原处”。",
+    "emptyWarning": "此操作无法撤销，文件将无法恢复。外接磁盘上的废纸篓也会被一起清空。",
+    "permanentNote": "包含命令项（brew cleanup / docker prune），它们会直接永久删除，不经过废纸篓。",
+    "adminNote": "部分项目属于管理员，访达会弹出密码框。"
+  },
+  "result": {
+    "title": "清理结果",
+    "dryTitle": "演练完成，没有移动任何文件",
+    "emptied": "废纸篓已清空",
+    "movedTitle": "已移入废纸篓",
+    "doneTitle": "已完成",
+    "dryDesc": "如果关闭演练模式，这 {{count}} 项会被移到废纸篓。",
+    "emptiedDesc": "空间已经释放。",
+    "trashHint": "{{count}} 项已移入废纸篓。清空废纸篓后才会真正释放空间。",
+    "doneDesc": "已处理 {{count}} 项。",
+    "failed": "{{count}} 项未处理",
+    "goTrash": "前往废纸篓",
+    "dryEmptyDesc": "关闭演练模式后，废纸篓里的这些内容会被永久删除。",
+    "dryCmdDesc": "另有 {{count}} 个命令项会直接执行，不经过废纸篓。"
+  },
+  "dev": {
+    "projectIdle": "上次改动：{{when}}"
+  },
+  "perm": {
+    "open": "打开系统设置",
+    "granted": "已授予完全磁盘访问权限",
+    "missing": "未授权：废纸篓、部分残留文件和系统目录无法读取",
+    "recheck": "重新检查"
+  },
+  "leftovers": {
+    "fdaHint": "授予完全磁盘访问权限后，可以检查其他应用的沙盒容器，发现更多残留。",
+    "empty": "没有找到已删除应用的残留文件。"
+  },
+  "large": {
+    "used": "{{when}}使用",
+    "modified": "{{when}}修改",
+    "thresholds": "阈值",
+    "large": "大文件：大于",
+    "oldMin": "旧文件：大于",
+    "oldDays": "旧文件：未使用超过",
+    "days": "{{count}} 天",
+    "matching": "{{count}} 个文件符合条件，共 {{size}}",
+    "any": "全部",
+    "onlyLarge": "大文件",
+    "onlyOld": "旧文件",
+    "none": "没有符合条件的文件",
+    "noneHint": "可以在“阈值”中调低标准。"
+  },
+  "trash": {
+    "trash": "废纸篓",
+    "hint": "移到废纸篓的文件仍然占用磁盘空间，清空后才会释放。",
+    "empty": "清空废纸篓",
+    "locked": "需要完全磁盘访问权限才能查看废纸篓",
+    "downloads": "下载文件夹",
+    "downloadsHint": "放了一个月以上的安装包已默认勾选。",
+    "downloadsEmpty": "下载文件夹是空的",
+    "added": "{{when}}下载"
+  },
+  "apps": {
+    "search": "搜索应用名称或 Bundle ID",
+    "sortName": "名称",
+    "sortSize": "大小",
+    "sortUsed": "上次使用",
+    "suggested": "超过 {{days}} 天未用",
+    "filter": {
+      "all": "全部",
+      "appStore": "App Store",
+      "brew": "Homebrew",
+      "manual": "手动安装"
+    },
+    "running": "正在运行",
+    "unusedBadge": "{{days}} 天未用",
+    "blocked": {
+      "systemExtension": "含系统扩展",
+      "protected": "受保护",
+      "self": "MacCleaner 本身"
+    },
+    "blockedHint": {
+      "systemExtension": "这个应用安装了系统扩展（通常是安全或网络软件），需要使用它自带的卸载程序。",
+      "protected": "这个应用位于受保护的位置或白名单中。",
+      "self": "不能在这里卸载 MacCleaner 自己。"
+    },
+    "lastUsedUnknown": "使用时间未知",
+    "pick": "选择一个应用",
+    "pickHint": "查看它的关联文件，并彻底卸载。",
+    "source": {
+      "appStore": "App Store",
+      "brew": "Homebrew",
+      "manual": "手动安装"
+    },
+    "willQuit": "{{name}} 正在运行，卸载前会先请求它正常退出。",
+    "uninstallTitle": "卸载 {{name}}",
+    "lastUsed": "上次使用：{{when}}",
+    "related": "关联文件",
+    "noRelated": "没有找到关联文件",
+    "total": "共计可释放",
+    "uninstall": "卸载",
+    "brewUninstall": "应用移到废纸篓后，会运行 brew uninstall --cask {{token}} 更新 Homebrew 的记录。如果这个 cask 带有卸载步骤，Homebrew 也会执行。"
+  },
+  "space": {
+    "clickBack": "点击返回上一级",
+    "system": "macOS 系统",
+    "hidden": "其他（快照、无权限读取的内容等）",
+    "other": "较小的项目",
+    "fdaHint": "授予完全磁盘访问权限后，统计结果会更完整。",
+    "scanning": "正在扫描… {{pct}}%",
+    "progress": "已扫描 {{files}} 个文件 · {{bytes}} / 约 {{total}}",
+    "summary": "{{files}} 个文件 · 用时 {{secs}} 秒",
+    "stale": "图表来自上次扫描，重新扫描可更新数据。",
+    "viewOnly": "只能查看",
+    "basket": "已选 {{count}} 项，共 {{size}}",
+    "basketHint": "勾选可删除的项目，移到废纸篓"
+  },
+  "smart": {
+    "scanningHint": "正在扫描…",
+    "found": "可以清理",
+    "foundHint": "只包含默认勾选的安全项目。大文件和废纸篓需要你单独查看。",
+    "cards": {
+      "system": "系统垃圾",
+      "dev": "开发者垃圾",
+      "leftovers": "残留文件",
+      "downloads": "下载文件夹",
+      "large": "大文件和旧文件",
+      "trash": "废纸篓"
+    },
+    "selectedCount": "已选 {{count}} / {{total}} 项",
+    "review": {
+      "large": "{{count}} 个文件待你查看",
+      "trash": "{{count}} 项"
+    },
+    "waiting": "等待扫描"
+  },
+  "settings": {
+    "general": "通用",
+    "language": "语言",
+    "followSystem": "跟随系统",
+    "theme": "外观",
+    "light": "浅色",
+    "dark": "深色",
+    "safety": "安全",
+    "dryRun": "演练模式",
+    "dryRunHint": "开启时只列出将要清理的内容，不移动任何文件。",
+    "fda": "完全磁盘访问权限",
+    "whitelist": "白名单",
+    "whitelistHint": "这些路径及其子目录不会被清理，各清理模块扫描时也会跳过。空间透视仍会统计它们的占用，但不能删除。标有“默认”的是预置的个人数据位置，可以移除。也可以在清理列表中右键添加。",
+    "pathPlaceholder": "输入路径，例如 ~/Projects/important",
+    "whitelistEmpty": "还没有添加任何路径",
+    "rules": "清理规则",
+    "appUnusedDays": "建议卸载的应用",
+    "appUnusedHint": "超过这个天数没打开的应用会被标出（不会自动勾选）。",
+    "nodeModulesDays": "闲置的 node_modules",
+    "nodeModulesHint": "项目根目录（以及所在 Git 仓库的根目录）下的文件超过这个天数没有改动，才会列出。",
+    "nodeModulesRoots": "node_modules 查找目录",
+    "nodeModulesRootsHint": "在这些目录下查找。~/Library、~/Applications、废纸篓和隐藏文件夹始终排除，只认旁边有 package.json 的 node_modules。",
+    "about": "关于",
+    "aboutText": "本地运行，不联网，不收集任何数据。",
+    "dryRunOffTitle": "关闭演练模式？",
+    "dryRunOffDesc": "关闭后，确认清理的项目会真正移到废纸篓；命令项（brew cleanup、docker prune）会直接删除。建议先看过几次演练结果再关闭。",
+    "dryRunOffConfirm": "我明白，关闭",
+    "defaultBadge": "默认",
+    "restoreDefaults": "恢复默认（{{count}} 项）",
+    "removeDefaultTitle": "移除默认保护？",
+    "removeDefaultDesc": "{{path}} 是预置的个人数据位置。移除后，其中的文件会出现在大文件扫描和空间透视里，并且可以被移到废纸篓。",
+    "removeDefaultConfirm": "移除",
+    "langZh": "简体中文",
+    "langEn": "English"
+  },
+  "history": {
+    "clear": "清空历史",
+    "statTotal": "累计清理",
+    "statRuns": "实际清理次数",
+    "statDry": "演练次数",
+    "empty": "还没有清理记录",
+    "emptyHint": "每次清理或演练都会记录在这里。",
+    "module": {
+      "system": "系统垃圾",
+      "dev": "开发者垃圾",
+      "large": "大文件和旧文件",
+      "leftovers": "残留文件",
+      "downloads": "下载文件夹",
+      "trash": "废纸篓",
+      "space": "空间透视",
+      "uninstall": "应用卸载",
+      "emptyTrash": "清空废纸篓",
+      "smart": "智能扫描",
+      "restore": "放回原处"
+    },
+    "failed": "{{count}} 项失败",
+    "method": {
+      "trash": "废纸篓",
+      "finder": "访达（管理员）",
+      "command": "命令",
+      "dryRun": "演练",
+      "emptyTrash": "已清空",
+      "restored": "已放回"
+    },
+    "clearTitle": "清空清理历史？",
+    "clearDesc": "只删除记录本身，不影响任何文件。",
+    "restore": "全部放回原处",
+    "restoreTitle": "放回原处",
+    "restoreDesc": "把这次移到废纸篓的 {{count}} 项移回原来的位置。原位置已经有同名文件的会跳过，不会覆盖。",
+    "restoreDone": "已放回 {{count}} 项。",
+    "restoreCount": "放回原处（{{count}} 项）",
+    "superseded": "{{count}} 项旧副本在废纸篓",
+    "skippedTitle": "{{count}} 项已跳过：原位置已有较新的版本",
+    "supersededHint": "这些项目在清理后被应用重新生成了。新版本留在原处，旧副本留在废纸篓，可以放心清空。"
+  },
+  "onboarding": {
+    "title": "欢迎使用 MacCleaner",
+    "subtitle": "在开始之前，先了解它如何保护你的文件",
+    "trashTitle": "只移到废纸篓",
+    "trashText": "清理的文件都进废纸篓，删错了可以放回原处。少数命令项（如 brew、Docker）会直接删除，确认时会单独提醒。",
+    "dryTitle": "默认演练模式",
+    "dryText": "先看看会清理什么，确认没问题再到设置里关闭。",
+    "safeTitle": "保护重要位置",
+    "safeText": "系统、钥匙串等位置永远不会被清理；文稿、邮件、iCloud 等个人数据默认受保护，可在设置中调整。",
+    "fdaTitle": "授予完全磁盘访问权限（推荐）",
+    "fda1": "点击“打开系统设置”，进入“隐私与安全性 → 完全磁盘访问权限”",
+    "fda2": "打开 MacCleaner 旁边的开关（没有的话点击“+”添加）",
+    "fda3": "回到这里点击“重新检查”，必要时重启 MacCleaner",
+    "later": "稍后再说",
+    "start": "开始使用"
+  },
+  "menu": {
+    "about": "关于 MacCleaner",
+    "hide": "隐藏 MacCleaner",
+    "hideOthers": "隐藏其他",
+    "showAll": "全部显示",
+    "quit": "退出 MacCleaner",
+    "edit": "编辑",
+    "undo": "撤销",
+    "redo": "重做",
+    "cut": "剪切",
+    "copy": "拷贝",
+    "paste": "粘贴",
+    "selectAll": "全选",
+    "window": "窗口",
+    "minimize": "最小化",
+    "zoom": "缩放",
+    "close": "关闭窗口"
+  },
+  "install": {
+    "title": {
+      "fresh": "安装到“应用程序”文件夹？",
+      "upgrade": "更新 MacCleaner？",
+      "reinstall": "重新安装 MacCleaner？",
+      "downgrade": "替换为较旧的版本？",
+      "conflict": "无法安装"
+    },
+    "installed": "已安装 {{v}}",
+    "thisCopy": "当前这份 {{v}}",
+    "desc": {
+      "fresh": "MacCleaner 正在从“应用程序”以外的位置运行。安装后会从“应用程序”文件夹重新打开。",
+      "upgrade": "已安装的旧版本会被移到废纸篓（需要时可以放回），然后安装这个版本并重新打开。设置、白名单和历史都会保留。",
+      "reinstall": "已安装的是同一版本。继续会把它移到废纸篓，再装上这一份并重新打开。设置、白名单和历史都会保留。",
+      "downgrade": "已安装的版本比这一份新。继续会把它移到废纸篓，换成这个较旧的版本。设置、白名单和历史都会保留。",
+      "conflict": "“应用程序”文件夹里已经有一个不是 MacCleaner 的 MacCleaner.app。请先自己处理它，再重新打开这一份。"
+    },
+    "downgradeWarning": "较旧的版本可能缺少新版本的修复。",
+    "action": {
+      "fresh": "安装并打开",
+      "upgrade": "更新并重新打开",
+      "reinstall": "重新安装",
+      "downgrade": "仍然替换"
+    },
+    "later": "以后再说"
+  }
+}

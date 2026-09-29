@@ -1,0 +1,491 @@
+{
+  "app": {
+    "tagline": "Keep your Mac light"
+  },
+  "nav": {
+    "sections": {
+      "clean": "Clean",
+      "apps": "Apps",
+      "tools": "Tools"
+    },
+    "smart": "Smart Scan",
+    "space": "Space Lens",
+    "system": "System Junk",
+    "dev": "Developer Junk",
+    "large": "Large & Old Files",
+    "apps": "Uninstaller",
+    "leftovers": "Leftovers",
+    "trash": "Trash & Downloads",
+    "history": "History",
+    "settings": "Settings"
+  },
+  "sidebar": {
+    "free": "{{free}} free of {{total}}"
+  },
+  "dryRun": {
+    "sidebar": "Dry run: nothing will be moved",
+    "badge": "Dry run"
+  },
+  "modules": {
+    "smart": {
+      "subtitle": "Scan everything that can be cleaned in one go",
+      "heroTitle": "Give your Mac a full check-up",
+      "heroHint": "Scans system junk, developer junk, leftovers, downloads, large files and the Trash (the Trash needs Full Disk Access). Scanning only reads; nothing is changed."
+    },
+    "space": {
+      "subtitle": "See where your disk space went",
+      "heroTitle": "Scan the whole disk",
+      "heroHint": "Measures the space each folder actually uses on the internal data volume, counting hard links once. Usually takes under a minute; a few minutes on Macs with very many files."
+    },
+    "system": {
+      "subtitle": "App caches, logs, crash reports and temporary files",
+      "heroTitle": "Find system junk",
+      "heroHint": "Caches are rebuilt automatically when needed. Caches of running apps and files in use are not selected, and are skipped again when cleaning."
+    },
+    "dev": {
+      "subtitle": "npm, pip, Homebrew and Docker caches, idle node_modules",
+      "heroTitle": "Find developer junk",
+      "heroHint": "Package caches can be downloaded again at any time. Only node_modules of projects untouched for a while are listed."
+    },
+    "large": {
+      "subtitle": "Find big files and files you haven't used in a long time",
+      "heroTitle": "Find large & old files",
+      "heroHint": "Scans your whole home folder, including hidden folders and ~/Library. Protected locations, Git repository internals, build output, virtual environments and app bundle contents are skipped. Nothing is selected by default; you decide."
+    },
+    "apps": {
+      "subtitle": "Remove apps completely, including their related files"
+    },
+    "leftovers": {
+      "subtitle": "Settings, caches and data left behind by removed apps",
+      "heroTitle": "Find leftovers",
+      "heroHint": "Compares bundle IDs with installed apps to find files that no longer have an owner."
+    },
+    "trash": {
+      "subtitle": "Empty the Trash and tidy up Downloads",
+      "heroTitle": "Check Trash & Downloads",
+      "heroHint": "Installers that have been in Downloads for over a month are suggested for cleaning."
+    },
+    "history": {
+      "subtitle": "A record of every clean-up, stored only on this Mac"
+    },
+    "settings": {
+      "subtitle": "Language, appearance, safety and cleaning rules"
+    }
+  },
+  "common": {
+    "scan": "Scan",
+    "scanning": "Scanning",
+    "cancel": "Cancel",
+    "rescan": "Rescan",
+    "refresh": "Refresh",
+    "clean": "Clean",
+    "moveToTrash": "Move to Trash",
+    "selectedToClean": "Selected",
+    "selectedOf": "{{count}} of {{total}} items selected, {{size}} found",
+    "selectNone": "Select none",
+    "allClean": "All clean, nothing to remove",
+    "itemCount_one": "{{count}} item",
+    "itemCount_other": "{{count}} items",
+    "showMore": "Show {{count}} more",
+    "quickLook": "Quick Look",
+    "reveal": "Show in Finder",
+    "addWhitelist": "Add to whitelist",
+    "unknown": "Unknown",
+    "all": "All",
+    "noResults": "No matching results",
+    "done": "Done"
+  },
+  "time": {
+    "today": "today",
+    "yesterday": "yesterday",
+    "daysAgo_one": "{{count}} day ago",
+    "daysAgo_other": "{{count}} days ago",
+    "monthsAgo_one": "{{count}} month ago",
+    "monthsAgo_other": "{{count}} months ago",
+    "yearsAgo_one": "{{count}} year ago",
+    "yearsAgo_other": "{{count}} years ago"
+  },
+  "groups": {
+    "userCaches": "User caches",
+    "logs": "Logs",
+    "crashReports": "Crash reports",
+    "tempFiles": "Temporary files",
+    "npm": "npm cache",
+    "pip": "pip cache",
+    "yarn": "Yarn cache",
+    "pnpm": "pnpm store",
+    "bun": "Bun cache",
+    "cargo": "Cargo cache",
+    "go": "Go build cache",
+    "gradle": "Gradle cache",
+    "maven": "Maven repository",
+    "xcode": "Xcode",
+    "playwright": "Playwright browsers",
+    "homebrew": "Homebrew cache and old versions",
+    "docker": "Docker",
+    "nodeModules": "Idle node_modules",
+    "installers": "Installers",
+    "archives": "Archives",
+    "downloads": "Other downloads",
+    "trash": "Trash",
+    "video": "Video",
+    "diskImage": "Disk images",
+    "archive": "Archives",
+    "document": "Documents",
+    "audio": "Audio",
+    "image": "Images",
+    "other": "Other",
+    "Application Support": "App data",
+    "Caches": "Caches",
+    "Preferences": "Preferences",
+    "Containers": "Sandbox containers",
+    "Group Containers": "Shared containers",
+    "Saved Application State": "Window state",
+    "HTTPStorages": "Web storage",
+    "WebKit": "WebKit data",
+    "Cookies": "Cookies",
+    "Logs": "Logs",
+    "Application Scripts": "App scripts",
+    "LaunchAgents": "Launch agents",
+    "system": "System-wide files",
+    "app": "App",
+    "space": "Space Lens"
+  },
+  "notes": {
+    "running": "App running",
+    "apple": "System",
+    "permanent": "Deleted permanently",
+    "sameVendor": "Vendor app still installed",
+    "recentlyUsed": "Recently changed",
+    "needsAdmin": "Needs password",
+    "inUse": "In use",
+    "sharedWithCopy": "Shared with another copy",
+    "locked": "Locked"
+  },
+  "errors": {
+    "notAbsolute": "Invalid path",
+    "notFound": "The file no longer exists",
+    "protected": "Protected location, can't be removed",
+    "whitelisted": "In your whitelist",
+    "inTrash": "Already in the Trash",
+    "outsideAllowed": "Outside the areas that may be cleaned",
+    "tooShallow": "This is a top-level folder; only its contents can be cleaned",
+    "appRunning": "The app is running, skipped",
+    "changed": "The file changed since the scan, please rescan",
+    "finderFailed": "Finder couldn't move this item (the password prompt may have been cancelled)",
+    "commandFailed": "The command failed",
+    "brewFailed": "brew uninstall failed; moved to the Trash instead",
+    "appRefusedQuit": "The app didn't quit (it may have unsaved documents); uninstall stopped",
+    "cancelled": "Cancelled",
+    "noScan": "Scan the disk first",
+    "unknown": "Something unexpected went wrong",
+    "insidePackage": "This is inside an app, library or document package, or a Git repository's .git folder; it can only be removed as a whole",
+    "self": "MacCleaner can't remove itself",
+    "inUse": "The file is in use, skipped",
+    "installNotAllowed": "This copy doesn't need installing",
+    "oldRunning": "The installed version didn't quit; quit it and try again",
+    "oldNotMoved": "Couldn't move the installed version to the Trash",
+    "copyFailed": "Copying to Applications failed. If the old version was moved to the Trash, you can put it back",
+    "locked": "The file is locked (Locked is checked in Finder's Get Info), skipped",
+    "restoreExists": "Something with the same name is already at the original location, skipped",
+    "restoreNotInTrash": "This item is no longer in the Trash",
+    "restoreManual": "No Trash location was recorded; put it back in Finder",
+    "restoreFailed": "Couldn't put it back"
+  },
+  "confirm": {
+    "title": "Confirm clean-up",
+    "emptyTitle": "Empty the Trash?",
+    "uninstallTitle": "Confirm uninstall",
+    "desc_one": "{{count}} item, {{size}}. Uncheck anything you want to keep.",
+    "desc_other": "{{count}} items, {{size}} in total. Uncheck anything you want to keep.",
+    "emptyDesc": "{{size}} in this Mac's Trash will be deleted permanently.",
+    "action": "Move to Trash",
+    "actionDry": "Start dry run",
+    "actionEmpty": "Empty permanently",
+    "actionUninstall": "Uninstall",
+    "dryRunNote": "Dry run is on: items are only listed, nothing is moved or deleted. You can turn it off in Settings.",
+    "trashNote": "Files and folders go to the Trash and can be put back until you empty it.",
+    "emptyWarning": "This can't be undone. The files can't be recovered. Trash on external drives is emptied too.",
+    "permanentNote": "Includes command items (brew cleanup / docker prune). They delete permanently, without the Trash.",
+    "adminNote": "Some items belong to the administrator; Finder will ask for your password."
+  },
+  "result": {
+    "title": "Result",
+    "dryTitle": "Dry run finished, nothing was moved",
+    "emptied": "Trash emptied",
+    "movedTitle": "Moved to the Trash",
+    "doneTitle": "Done",
+    "dryDesc_one": "With dry run off, this item would be moved to the Trash.",
+    "dryDesc_other": "With dry run off, these {{count}} items would be moved to the Trash.",
+    "emptiedDesc": "The space has been freed.",
+    "trashHint_one": "{{count}} item moved to the Trash. Space is freed once you empty the Trash.",
+    "trashHint_other": "{{count}} items moved to the Trash. Space is freed once you empty the Trash.",
+    "doneDesc_one": "{{count}} item processed.",
+    "doneDesc_other": "{{count}} items processed.",
+    "failed_one": "{{count}} item not processed",
+    "failed_other": "{{count}} items not processed",
+    "goTrash": "Go to Trash",
+    "dryEmptyDesc": "With dry run off, the Trash would be emptied permanently.",
+    "dryCmdDesc_one": "{{count}} command item would run and delete directly.",
+    "dryCmdDesc_other": "{{count}} command items would run and delete directly."
+  },
+  "dev": {
+    "projectIdle": "Last changed {{when}}"
+  },
+  "perm": {
+    "open": "Open System Settings",
+    "granted": "Full Disk Access granted",
+    "missing": "Not granted: the Trash, some leftovers and system folders can't be read",
+    "recheck": "Check again"
+  },
+  "leftovers": {
+    "fdaHint": "With Full Disk Access, other apps' sandbox containers can be checked to find more leftovers.",
+    "empty": "No leftovers from removed apps were found."
+  },
+  "large": {
+    "used": "Used {{when}}",
+    "modified": "Modified {{when}}",
+    "thresholds": "Thresholds",
+    "large": "Large: bigger than",
+    "oldMin": "Old: bigger than",
+    "oldDays": "Old: unused for",
+    "days_one": "{{count}} day",
+    "days_other": "{{count}} days",
+    "matching_one": "{{count}} file matches, {{size}}",
+    "matching_other": "{{count}} files match, {{size}} in total",
+    "any": "All",
+    "onlyLarge": "Large",
+    "onlyOld": "Old",
+    "none": "No files match",
+    "noneHint": "Lower the limits under Thresholds."
+  },
+  "trash": {
+    "trash": "Trash",
+    "hint": "Files in the Trash still use disk space until it is emptied.",
+    "empty": "Empty Trash",
+    "locked": "Full Disk Access is needed to look inside the Trash",
+    "downloads": "Downloads",
+    "downloadsHint": "Installers older than a month are selected by default.",
+    "downloadsEmpty": "Your Downloads folder is empty",
+    "added": "Added {{when}}"
+  },
+  "apps": {
+    "search": "Search by name or bundle ID",
+    "sortName": "Name",
+    "sortSize": "Size",
+    "sortUsed": "Last used",
+    "suggested": "Unused for {{days}}+ days",
+    "filter": {
+      "all": "All",
+      "appStore": "App Store",
+      "brew": "Homebrew",
+      "manual": "Manual"
+    },
+    "running": "Running",
+    "unusedBadge": "Unused {{days}} days",
+    "blocked": {
+      "systemExtension": "System extension",
+      "protected": "Protected",
+      "self": "MacCleaner itself"
+    },
+    "blockedHint": {
+      "systemExtension": "This app installs a system extension (usually security or network software). Use its own uninstaller.",
+      "protected": "This app is in a protected location or your whitelist.",
+      "self": "MacCleaner can't uninstall itself."
+    },
+    "lastUsedUnknown": "Last use unknown",
+    "pick": "Pick an app",
+    "pickHint": "See its related files and remove it completely.",
+    "source": {
+      "appStore": "App Store",
+      "brew": "Homebrew",
+      "manual": "Manual"
+    },
+    "willQuit": "{{name}} is running. It will be asked to quit before uninstalling.",
+    "uninstallTitle": "Uninstall {{name}}",
+    "lastUsed": "Last used: {{when}}",
+    "related": "Related files",
+    "noRelated": "No related files found",
+    "total": "Total to free",
+    "uninstall": "Uninstall",
+    "brewUninstall": "After the app is moved to the Trash, brew uninstall --cask {{token}} runs to update Homebrew's records. If the cask has uninstall steps, Homebrew runs them too."
+  },
+  "space": {
+    "clickBack": "Click to go up",
+    "system": "macOS system",
+    "hidden": "Other (snapshots, unreadable items, etc.)",
+    "other": "Smaller items",
+    "fdaHint": "With Full Disk Access the numbers will be more complete.",
+    "scanning": "Scanning… {{pct}}%",
+    "progress": "{{files}} files · {{bytes}} of about {{total}}",
+    "summary": "{{files}} files · {{secs}} s",
+    "stale": "The chart is from the last scan. Rescan to refresh it.",
+    "viewOnly": "View only",
+    "basket_one": "{{count}} item selected, {{size}}",
+    "basket_other": "{{count}} items selected, {{size}}",
+    "basketHint": "Check removable items to move them to the Trash"
+  },
+  "smart": {
+    "scanningHint": "Scanning…",
+    "found": "Ready to clean",
+    "foundHint": "Only the safe items selected by default. Review large files and the Trash separately.",
+    "cards": {
+      "system": "System junk",
+      "dev": "Developer junk",
+      "leftovers": "Leftovers",
+      "downloads": "Downloads",
+      "large": "Large & old files",
+      "trash": "Trash"
+    },
+    "selectedCount": "{{count}} of {{total}} selected",
+    "review": {
+      "large_one": "{{count}} file to review",
+      "large_other": "{{count}} files to review",
+      "trash_one": "{{count}} item",
+      "trash_other": "{{count}} items"
+    },
+    "waiting": "Waiting"
+  },
+  "settings": {
+    "general": "General",
+    "language": "Language",
+    "followSystem": "System",
+    "theme": "Appearance",
+    "light": "Light",
+    "dark": "Dark",
+    "safety": "Safety",
+    "dryRun": "Dry run",
+    "dryRunHint": "When on, clean-ups only list what would be removed. Nothing is moved.",
+    "fda": "Full Disk Access",
+    "whitelist": "Whitelist",
+    "whitelistHint": "These paths and everything below them are never cleaned and are skipped by the cleaning modules. Space Lens still counts their size but can't delete them. Entries marked “Default” are built-in personal-data locations; you can remove them. You can also right-click items in the cleaning lists.",
+    "pathPlaceholder": "Enter a path, e.g. ~/Projects/important",
+    "whitelistEmpty": "No paths added yet",
+    "rules": "Cleaning rules",
+    "appUnusedDays": "Suggest uninstalling apps",
+    "appUnusedHint": "Apps not opened for this long are flagged (never selected automatically).",
+    "nodeModulesDays": "Idle node_modules",
+    "nodeModulesHint": "Listed only when nothing at the top of the project (or of its Git repository) has changed for this long.",
+    "nodeModulesRoots": "Where to look for node_modules",
+    "nodeModulesRootsHint": "Searched below these folders. ~/Library, ~/Applications, the Trash and hidden folders are always excluded; only node_modules next to a package.json count.",
+    "about": "About",
+    "aboutText": "Runs locally. No network access, no data collection.",
+    "dryRunOffTitle": "Turn off dry run?",
+    "dryRunOffDesc": "Confirmed items will then really be moved to the Trash; command items (brew cleanup, docker prune) delete directly. Review a few dry runs before turning it off.",
+    "dryRunOffConfirm": "I understand, turn off",
+    "defaultBadge": "Default",
+    "restoreDefaults_one": "Restore default ({{count}})",
+    "restoreDefaults_other": "Restore defaults ({{count}})",
+    "removeDefaultTitle": "Remove default protection?",
+    "removeDefaultDesc": "{{path}} is a built-in personal-data location. Once removed, its files appear in Large Files and Space Lens and can be moved to the Trash.",
+    "removeDefaultConfirm": "Remove",
+    "langZh": "Chinese (Simplified)",
+    "langEn": "English"
+  },
+  "history": {
+    "clear": "Clear history",
+    "statTotal": "Total cleaned",
+    "statRuns": "Real clean-ups",
+    "statDry": "Dry runs",
+    "empty": "No clean-ups yet",
+    "emptyHint": "Every clean-up and dry run is recorded here.",
+    "module": {
+      "system": "System junk",
+      "dev": "Developer junk",
+      "large": "Large & old files",
+      "leftovers": "Leftovers",
+      "downloads": "Downloads",
+      "trash": "Trash",
+      "space": "Space Lens",
+      "uninstall": "Uninstall",
+      "emptyTrash": "Empty Trash",
+      "smart": "Smart Scan",
+      "restore": "Put back"
+    },
+    "failed_one": "{{count}} failed",
+    "failed_other": "{{count}} failed",
+    "method": {
+      "trash": "Trash",
+      "finder": "Finder (admin)",
+      "command": "Command",
+      "dryRun": "Dry run",
+      "emptyTrash": "Emptied",
+      "restored": "Put back"
+    },
+    "clearTitle": "Clear history?",
+    "clearDesc": "Only the records are removed. No files are affected.",
+    "restore": "Put all back",
+    "restoreTitle": "Put back",
+    "restoreDesc_one": "Move the {{count}} item this clean-up moved to the Trash back to where it was. Nothing at the original location is overwritten.",
+    "restoreDesc_other": "Move the {{count}} items this clean-up moved to the Trash back to where they were. Anything already at the original location is skipped, never overwritten.",
+    "restoreDone_one": "{{count}} item put back.",
+    "restoreDone_other": "{{count}} items put back.",
+    "restoreCount_one": "Put back ({{count}})",
+    "restoreCount_other": "Put back ({{count}})",
+    "superseded_one": "{{count}} old copy in the Trash",
+    "superseded_other": "{{count}} old copies in the Trash",
+    "skippedTitle_one": "{{count}} item skipped: a newer copy is already at the original location",
+    "skippedTitle_other": "{{count}} items skipped: a newer copy is already at the original location",
+    "supersededHint": "These were recreated by their apps after the clean-up. The new copy stays in place; the old copy stays in the Trash and is safe to empty."
+  },
+  "onboarding": {
+    "title": "Welcome to MacCleaner",
+    "subtitle": "Before you start, here is how it keeps your files safe",
+    "trashTitle": "Trash only",
+    "trashText": "Cleaned files go to the Trash, so mistakes can be put back. A few command items (brew, Docker) delete directly; you are warned before confirming.",
+    "dryTitle": "Dry run by default",
+    "dryText": "See what would be cleaned first. Turn it off in Settings when you're happy.",
+    "safeTitle": "Important places protected",
+    "safeText": "System files and Keychains are never cleaned. Documents, Mail, iCloud and other personal data are protected by default; adjust in Settings.",
+    "fdaTitle": "Grant Full Disk Access (recommended)",
+    "fda1": "Click “Open System Settings” and go to Privacy & Security → Full Disk Access",
+    "fda2": "Turn on the switch next to MacCleaner (click “+” to add it if missing)",
+    "fda3": "Come back and click “Check again”; restart MacCleaner if needed",
+    "later": "Later",
+    "start": "Get started"
+  },
+  "menu": {
+    "about": "About MacCleaner",
+    "hide": "Hide MacCleaner",
+    "hideOthers": "Hide Others",
+    "showAll": "Show All",
+    "quit": "Quit MacCleaner",
+    "edit": "Edit",
+    "undo": "Undo",
+    "redo": "Redo",
+    "cut": "Cut",
+    "copy": "Copy",
+    "paste": "Paste",
+    "selectAll": "Select All",
+    "window": "Window",
+    "minimize": "Minimize",
+    "zoom": "Zoom",
+    "close": "Close Window"
+  },
+  "install": {
+    "title": {
+      "fresh": "Install in the Applications folder?",
+      "upgrade": "Update MacCleaner?",
+      "reinstall": "Reinstall MacCleaner?",
+      "downgrade": "Replace with an older version?",
+      "conflict": "Can't install"
+    },
+    "installed": "Installed {{v}}",
+    "thisCopy": "This copy {{v}}",
+    "desc": {
+      "fresh": "MacCleaner is running from outside the Applications folder. After installing it reopens from Applications.",
+      "upgrade": "The installed version is moved to the Trash (you can put it back), then this version is installed and reopened. Settings, whitelist and history are kept.",
+      "reinstall": "The same version is already installed. Continuing moves it to the Trash, installs this copy and reopens. Settings, whitelist and history are kept.",
+      "downgrade": "The installed version is newer than this copy. Continuing moves it to the Trash and installs this older version. Settings, whitelist and history are kept.",
+      "conflict": "Applications already contains a MacCleaner.app that isn't MacCleaner. Deal with it first, then open this copy again."
+    },
+    "downgradeWarning": "An older version may lack fixes from the newer one.",
+    "action": {
+      "fresh": "Install and open",
+      "upgrade": "Update and reopen",
+      "reinstall": "Reinstall",
+      "downgrade": "Replace anyway"
+    },
+    "later": "Not now"
+  }
+}
