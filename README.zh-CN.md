@@ -6,8 +6,8 @@
 
 <p align="center"><img src="docs/screenshots/smart-zh.jpg" alt="智能扫描" width="860"></p>
 <p align="center">
-  <img src="docs/screenshots/space-zh.jpg" alt="空间透视" width="424">
-  <img src="docs/screenshots/apps-zh.jpg" alt="应用卸载" width="424">
+  <img src="docs/screenshots/space-zh.jpg" alt="空间透视" width="49%">
+  <img src="docs/screenshots/apps-zh.jpg" alt="应用卸载" width="49%">
 </p>
 
 ## 功能
