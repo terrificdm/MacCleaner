@@ -129,7 +129,7 @@ Everything runs on your own Mac; nothing is uploaded.
    ./scripts/package-dmg.sh              # builds, signs, packages
    ./scripts/package-dmg.sh --no-build   # repackage the last build only
    ```
-   Output: `release/MacCleaner_<version>_aarch64.dmg` (not tracked by git) and its SHA-256 checksum. The dmg contains `MacCleaner.app`, a shortcut to Applications, and both READMEs.
+   Output: `release/MacCleaner_<version>_aarch64.dmg` (not tracked by git) and its SHA-256 checksum. The dmg contains `MacCleaner.app`, a shortcut to Applications, both READMEs with their screenshots, and the license.
 5. Send the dmg and its checksum. Recipients follow [Install](#install).
 
 Build every release on the same Mac with the same signing keychain. Then updates keep the permissions people already granted. If the keychain is lost, a new identity is created and everyone has to grant Full Disk Access again. To keep it safe, back up `~/Library/Keychains/maccleaner-signing.keychain-db` together with its password (`security find-generic-password -s maccleaner-signing-keychain -w`), for example in a password manager.

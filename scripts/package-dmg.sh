@@ -1,7 +1,8 @@
 #!/bin/bash
 # Builds and signs MacCleaner.app, then packages it as
 # release/MacCleaner_<version>_aarch64.dmg for installing on other Macs.
-# The dmg contains the app, an /Applications shortcut and both READMEs.
+# The dmg contains the app, an /Applications shortcut, both READMEs (with
+# their screenshots) and the license.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
@@ -18,7 +19,9 @@ STAGE=$(mktemp -d)
 trap 'rm -rf "$STAGE"' EXIT
 ditto "$APP_SRC" "$STAGE/MacCleaner.app"
 ln -s /Applications "$STAGE/Applications"
-cp README.md README.zh-CN.md "$STAGE/"
+cp README.md README.zh-CN.md LICENSE "$STAGE/"
+# The READMEs reference these images by relative path.
+mkdir -p "$STAGE/docs" && cp -R docs/screenshots "$STAGE/docs/"
 
 mkdir -p release
 rm -f "$OUT"

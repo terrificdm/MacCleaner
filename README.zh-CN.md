@@ -129,7 +129,7 @@ MacCleaner 第一次移动属于管理员的项目或清空废纸篓时，系统
    ./scripts/package-dmg.sh              # 构建、签名并打包
    ./scripts/package-dmg.sh --no-build   # 只把上一次的构建重新打包
    ```
-   输出：`release/MacCleaner_<版本>_aarch64.dmg`（不纳入 git）及其 SHA-256 校验值。dmg 里包含 `MacCleaner.app`、指向“应用程序”的快捷方式，以及中英文两版 README。
+   输出：`release/MacCleaner_<版本>_aarch64.dmg`（不纳入 git）及其 SHA-256 校验值。dmg 里包含 `MacCleaner.app`、指向“应用程序”的快捷方式、中英文两版 README（连同截图）以及许可证。
 5. 把 dmg 和校验值发给对方，对方按[安装](#安装)一节操作。
 
 每次发布都在同一台 Mac、用同一个签名钥匙串构建，这样更新后大家已经授予的权限不会失效。如果钥匙串丢了，就会生成新的签名身份，所有人都要重新授予完全磁盘访问权限。为了保险，建议把 `~/Library/Keychains/maccleaner-signing.keychain-db` 连同它的密码（`security find-generic-password -s maccleaner-signing-keychain -w`）一起备份，比如存进密码管理器。
