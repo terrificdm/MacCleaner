@@ -4,6 +4,12 @@
 
 A disk cleaner and app uninstaller for macOS on Apple silicon. It runs entirely on your Mac: no network access, no data collection. Built with Tauri 2 (Rust) and React.
 
+<p align="center"><img src="docs/screenshots/smart-en.jpg" alt="Smart Scan" width="860"></p>
+<p align="center">
+  <img src="docs/screenshots/space-en.jpg" alt="Space Lens" width="424">
+  <img src="docs/screenshots/apps-en.jpg" alt="Uninstaller" width="424">
+</p>
+
 ## Features
 
 | Module | What it does |

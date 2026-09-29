@@ -4,6 +4,12 @@
 
 一款运行在 Apple 芯片 Mac 上的磁盘清理和应用卸载工具。完全在本机运行，不联网，不收集任何数据。使用 Tauri 2（Rust）和 React 开发。
 
+<p align="center"><img src="docs/screenshots/smart-zh.jpg" alt="智能扫描" width="860"></p>
+<p align="center">
+  <img src="docs/screenshots/space-zh.jpg" alt="空间透视" width="424">
+  <img src="docs/screenshots/apps-zh.jpg" alt="应用卸载" width="424">
+</p>
+
 ## 功能
 
 | 模块 | 作用 |
